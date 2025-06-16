@@ -32,6 +32,7 @@ Recycle and track your progress in the Planet Pals program.
 Earn rewards and merchandise as you make a difference
 
 Getting Started
+---------------
 Clone the repository:
 bash
 git clone https://github.com/Nithurshan12/Planet---Pals.git
