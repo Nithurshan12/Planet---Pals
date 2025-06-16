@@ -3,7 +3,7 @@
 Planet Pals is an online program that rewards you with merchandise if you recycle. This online program is made by the 8 Micro-Badges—a step-by-step journey that helps you discover problems, create solutions, and make a positive impact at your school or community.
 
 The 8 Micro-Badges
-
+------------------
 🏆 Micro-Badge 1: Problem Detective
 Identify a real problem and interview others to understand it.
 
@@ -29,6 +29,7 @@ Create and deliver a 3-minute presentation about your innovation journey.
 Reflect on what you learned and set goals for your continued growth.
 
 How It Works
+------------
 Recycle and track your progress in the Planet Pals program.
 Earn rewards and merchandise as you make a difference
 
