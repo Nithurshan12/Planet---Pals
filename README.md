@@ -30,6 +30,7 @@ Reflect on what you learned and set goals for your continued growth.
 How It Works
 Recycle and track your progress in the Planet Pals program.
 Earn rewards and merchandise as you make a difference
+
 Getting Started
 Clone the repository:
 bash
@@ -38,4 +39,4 @@ Open index.html in your browser.
 Begin your journey with the 8 Micro-Badges!
 Contributing
 Suggestions and contributions are welcome! Fork the repo, submit issues, or open pull requests to help grow Planet Pals.
-------------------------------------------------------------------------------------------------------------------------
+
