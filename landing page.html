@@ -5,116 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Planet Pals - Sign In / Sign Up</title>
   <style>
-    body {
-      background: linear-gradient(135deg, #0f2027 0%, #2c5364 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      margin: 0;
-      font-family: 'Segoe UI', Arial, sans-serif;
-    }
-    .container {
-      background: rgba(255,255,255,0.12);
-      border-radius: 16px;
-      box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
-      padding: 2rem 2.5rem;
-      width: 350px;
-      backdrop-filter: blur(5px);
-    }
-    .tabs {
-      display: flex;
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
-    .tab {
-      flex: 1;
-      padding: 0.5rem 0;
-      text-align: center;
-      cursor: pointer;
-      font-weight: bold;
-      border-bottom: 2px solid transparent;
-      transition: border-color 0.3s;
-      color: #fff;
-      letter-spacing: 1px;
-    }
-    .tab.active {
-      border-bottom: 2px solid #4fd1c5;
-      color: #4fd1c5;
-    }
-    form {
-      display: none;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    form.active {
-      display: flex;
-    }
-    label {
-      color: #eee;
-      font-size: 0.98rem;
-      margin-bottom: 0.2rem;
-    }
-    input {
-      padding: 0.6rem;
-      border: none;
-      border-radius: 6px;
-      outline: none;
-      font-size: 1rem;
-      background: rgba(255,255,255,0.18);
-      color: #222;
-      margin-bottom: 0.3rem;
-      transition: background 0.2s;
-    }
-    input:focus {
-      background: rgba(255,255,255,0.35);
-    }
-    .actions {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .actions a {
-      color: #4fd1c5;
-      text-decoration: none;
-      font-size: 0.92rem;
-    }
-    button {
-      background: #4fd1c5;
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      padding: 0.7rem;
-      font-size: 1.08rem;
-      font-weight: 500;
-      cursor: pointer;
-      margin-top: 0.4rem;
-      transition: background 0.2s;
-    }
-    button:hover {
-      background: #38b2ac;
-    }
-    .social-login {
-      text-align: center;
-      margin: 1.1rem 0 0.2rem 0;
-    }
-    .social-login button {
-      background: #222;
-      color: #fff;
-      margin: 0 0.3rem;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      font-size: 0.95rem;
-      border: none;
-      transition: background 0.2s;
-    }
-    .social-login button:hover {
-      background: #4fd1c5;
-      color: #222;
-    }
-    @media (max-width: 450px) {
-      .container { width: 98vw; padding: 1.5rem 0.5rem;}
-    }
+    /* [Your existing styles – omit for brevity, keep as-is] */
+    /* ... (Keep all your style code here) ... */
   </style>
 </head>
 <body>
@@ -138,6 +30,7 @@
         <button type="button">Sign in with Google</button>
         <button type="button">Sign in with Facebook</button>
       </div>
+      <div id="signin-message" style="color:red; margin-top:10px;"></div>
     </form>
     <form id="signup">
       <label for="signup-name">Full Name</label>
@@ -154,8 +47,62 @@
         <button type="button">Sign up with Google</button>
         <button type="button">Sign up with Facebook</button>
       </div>
+      <div id="signup-message" style="color:red; margin-top:10px;"></div>
     </form>
   </div>
   <script>
-    function showTab(tab
-
+    // Tab switching logic
+    function showTab(tab) {
+      const tabs = document.querySelectorAll('.tab');
+      const forms = document.querySelectorAll('form');
+      tabs.forEach(t => t.classList.remove('active'));
+      forms.forEach(f => f.classList.remove('active'));
+      if (tab === 'signin') {
+        tabs[0].classList.add('active');
+        forms[0].classList.add('active');
+      } else {
+        tabs[1].classList.add('active');
+        forms[1].classList.add('active');
+      }
+      // Clear messages
+      document.getElementById('signin-message').textContent = '';
+      document.getElementById('signup-message').textContent = '';
+    }
+
+    // Sign In form handler
+    document.getElementById('signin').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = document.getElementById('signin-email').value;
+      const password = document.getElementById('signin-password').value;
+      if (!email || !password) {
+        document.getElementById('signin-message').textContent = 'Please enter email and password.';
+        return;
+      }
+      // Simulate successful sign in
+      document.getElementById('signin-message').style.color = 'green';
+      document.getElementById('signin-message').textContent = 'Sign in successful! (Simulated)';
+      // TODO: Replace this with real authentication and redirect logic
+    });
+
+    // Sign Up form handler
+    document.getElementById('signup').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('signup-name').value;
+      const email = document.getElementById('signup-email').value;
+      const password = document.getElementById('signup-password').value;
+      const confirm = document.getElementById('signup-confirm').value;
+      if (!name || !email || !password || !confirm) {
+        document.getElementById('signup-message').textContent = 'All fields are required.';
+        return;
+      }
+      if (password !== confirm) {
+        document.getElementById('signup-message').textContent = 'Passwords do not match.';
+        return;
+      }
+      document.getElementById('signup-message').style.color = 'green';
+      document.getElementById('signup-message').textContent = 'Sign up successful! (Simulated)';
+      // TODO: Replace this with real sign-up and redirect logic
+    });
+  </script>
+</body>
+</html>
