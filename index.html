@@ -1,109 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Planet - Pals Recycling App</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #e6f7e6;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-    .logo {
-      margin-top: 40px;
-    }
-    .container {
-      background: #fff;
-      margin: 40px auto;
-      max-width: 400px;
-      padding: 32px;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-    }
-    h1 {
-      color: #337a41;
-    }
-    .button {
-      display: inline-block;
-      margin: 16px 8px;
-      padding: 12px 24px;
-      background: #337a41;
-      color: #fff;
-      border: none;
-      border-radius: 24px;
-      font-size: 1rem;
-      cursor: pointer;
-      text-decoration: none;
-    }
-    .button:hover {
-      background: #22542a;
-    }
-    .info {
-      margin-top: 24px;
-      color: #333;
-    }
-    #camera-stream {
-      display: none;
-      margin-top: 20px;
-      width: 320px;
-      height: 240px;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Planet Pals - Home</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="logo">
-    <img src="Screenshot 2025-06-09 11.14.30 AM.png" alt="Planet - Pals Logo" width="120">
-  </div>
-  <div class="container">
-    <h1>Planet - Pals</h1>
-    <p>Your friendly recycling assistant!</p>
-    <a href="#" id="scan-btn" class="button">Scan Item</a>
-    <a href="#" id="find-centers-btn" class="button">Find Recycling Centers</a>
-    <a href="#" id="tips-info-btn" class="button">Tips & Info</a>
-    <video id="camera-stream" autoplay playsinline></video>
-    <div class="info">
-      <h2>How it works</h2>
-      <ul style="text-align:left; display:inline-block;">
-        <li>Snap a photo or scan a barcode to check recyclability</li>
-        <li>Get tips on sorting and recycling different items</li>
-        <li>Find nearby recycling centers</li>
-      </ul>
-    </div>
-  </div>
-  <script>
-    document.getElementById('scan-btn').addEventListener('click', function(event) {
-      event.preventDefault();
-      const video = document.getElementById('camera-stream');
-      video.style.display = 'block';
-
-      if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-        navigator.mediaDevices.getUserMedia({ video: true })
-          .then(function(stream) {
-            video.srcObject = stream;
-          })
-          .catch(function(err) {
-            alert('Could not access the camera: ' + err);
-          });
-      } else {
-        alert('getUserMedia is not supported in your browser');
-      }
-    });
-
-    document.getElementById('find-centers-btn').addEventListener('click', function(event) {
-      event.preventDefault();
-      alert("Feature coming soon: We'll help you find recycling centers near you!");
-      // In the future, you could open a map or link to a recycling center finder.
-    });
-
-    document.getElementById('tips-info-btn').addEventListener('click', function(event) {
-      event.preventDefault();
-      alert("Recycling Tips:\n\n- Rinse containers before recycling.\n- Check local recycling rules.\n- Don't recycle plastic bags in curbside bins.");
-      // In the future, you could display a modal or redirect to a tips page.
-    });
-  </script>
+    <header>
+        <div class="date">June 20, 2025</div>
+        <div class="top-right">
+            <span class="time">13:28</span>
+            <img src="profile-icon.png" alt="Profile" class="profile-icon">
+        </div>
+    </header>
+    <main>
+        <div class="camera-section">
+            <div class="camera-wrapper">
+                <img src="camera-icon.png" alt="Camera" class="camera-icon">
+                <div class="arrows-circle"></div>
+            </div>
+            <button class="scan-btn">Scan Now</button>
+        </div>
+        <div class="home-menu">
+            <button class="menu-btn points">Points</button>
+            <button class="menu-btn merchandise">Merchandise</button>
+            <button class="menu-btn settings">Settings</button>
+            <button class="menu-btn recycling">Near Me Recycling Centers</button>
+            <button class="menu-btn about">About</button>
+        </div>
+    </main>
 </body>
 </html>
