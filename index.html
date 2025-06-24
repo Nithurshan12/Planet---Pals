@@ -1,33 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Planet Pals - Home</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Planet Pals - Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Nunito&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="date">June 20, 2025</div>
-        <div class="top-right">
-            <span class="time">13:28</span>
-            <img src="profile-icon.png" alt="Profile" class="profile-icon">
-        </div>
-    </header>
-    <main>
-        <div class="camera-section">
-            <div class="camera-wrapper">
-                <img src="camera-icon.png" alt="Camera" class="camera-icon">
-                <div class="arrows-circle"></div>
-            </div>
-            <button class="scan-btn">Scan Now</button>
-        </div>
-        <div class="home-menu">
-            <button class="menu-btn points">Points</button>
-            <button class="menu-btn merchandise">Merchandise</button>
-            <button class="menu-btn settings">Settings</button>
-            <button class="menu-btn recycling">Near Me Recycling Centers</button>
-            <button class="menu-btn about">About</button>
-        </div>
-    </main>
+  <div class="hero">
+    <div class="eco-bg"></div>
+    <div class="hero-content">
+      <h1>Planet <span>Pals</span></h1>
+      <p class="subtitle">Join us in making the world greener, one step at a time!</p>
+      <img src="https://cdn.pixabay.com/photo/2017/01/31/13/14/earth-2024692_1280.png" alt="Planet Earth" class="earth-img">
+    </div>
+  </div>
+
+  <nav class="bottom-nav">
+    <button class="nav-btn" title="Settings">
+      <span class="material-icons">settings</span>
+      <span>Settings</span>
+    </button>
+    <button class="nav-btn" title="Tips">
+      <span class="material-icons">emoji_objects</span>
+      <span>Tips</span>
+    </button>
+    <button class="nav-btn" title="Points">
+      <span class="material-icons">star</span>
+      <span>Points</span>
+    </button>
+    <button class="nav-btn" title="Merchandise">
+      <span class="material-icons">shopping_bag</span>
+      <span>Merch</span>
+    </button>
+    <button class="nav-btn" title="Recycling Centers Near Me">
+      <span class="material-icons">location_on</span>
+      <span>Recycle</span>
+    </button>
+  </nav>
+
+  <!-- Google Material Icons CDN -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </body>
 </html>
