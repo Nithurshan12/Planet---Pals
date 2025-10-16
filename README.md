@@ -1,6 +1,6 @@
 # Planet---Pals
 
-Planet Pals is an online program that rewards you with merchandise if you recycle. This online program is made by the 8 Micro-Badges—a step-by-step journey that helps you discover problems, create solutions, and make a positive impact at your school or community.
+Planet Pals is an online program that rewards you with merchandise if you recycle. This online program is made by the Innovation Spirit, a step-by-step journey that helps you discover problems, create solutions, and make a positive impact at your school or community.
 
 The 8 Micro-Badges
 ------------------
